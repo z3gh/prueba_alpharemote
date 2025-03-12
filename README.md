@@ -12,8 +12,7 @@ Esta aplicación de consola en PHP permite buscar recursos (clases y exámenes) 
 
 1. Clona el repositorio.
 2. Crea la base de datos ejecutando el archivo `sql/create_tables.sql` en tu servidor MySQL.
-3. Configura las credenciales de la base de datos en `src/Database/DatabaseConnection.php`.
-4. Ejecuta `composer dump-autoload` (o utiliza el autoloader proporcionado) para generar el autoload.
+3. Configura las credenciales de la base de datos en `.env`.
 
 ## Uso
 
