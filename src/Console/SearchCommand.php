@@ -5,6 +5,11 @@ namespace App\Console;
 use App\Repository\ResourceRepository;
 use App\Interface\CommandInterface;
 
+/**
+ * Class SearchCommand
+ *
+ * Comando para buscar recursos (clases y exámenes).
+ */
 class SearchCommand implements CommandInterface
 {
     private $repository;
@@ -14,6 +19,11 @@ class SearchCommand implements CommandInterface
         $this->repository = new ResourceRepository();
     }
 
+    /**
+     * Ejecuta la búsqueda de recursos.
+     *
+     * @param string $term
+     */
     public function execute(string $term): void
     {
         try {

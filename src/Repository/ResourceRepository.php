@@ -7,6 +7,11 @@ use App\Entity\Clase;
 use App\Entity\Examen;
 // use App\Entity\ResourceInterface;
 
+/**
+ * Class ResourceRepository
+ *
+ * Maneja las consultas a la base de datos para los recursos.
+ */
 class ResourceRepository
 {
     private $pdo;
@@ -16,6 +21,13 @@ class ResourceRepository
         $this->pdo = DatabaseConnection::getInstance()->getConnection();
     }
 
+    /**
+     * Busca recursos cuyo nombre contenga el término (mínimo 3 caracteres).
+     *
+     * @param string $term
+     * @return ResourceInterface[]
+     * @throws \InvalidArgumentException
+     */
     public function search(string $term): array
     {
         $term = trim($term);

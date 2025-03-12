@@ -2,6 +2,11 @@
 
 namespace App\Entity;
 
+/**
+ * Class Examen
+ *
+ * Representa un examen.
+ */
 class Examen extends AbstractResource
 {
     private $tipoExamen;
@@ -12,6 +17,11 @@ class Examen extends AbstractResource
         $this->tipoExamen = $tipoExamen;
     }
 
+    /**
+     * Retorna los detalles del examen.
+     *
+     * @return string
+     */
     public function getDetails(): string
     {
         return sprintf("%s: %s | %s", $this->getType(), $this->getName(), $this->tipoExamen);

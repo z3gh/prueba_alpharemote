@@ -2,6 +2,11 @@
 
 namespace App\Database;
 
+/**
+ * Class DatabaseConnection
+ *
+ * Conexión a la base de datos usando PDO.
+ */
 class DatabaseConnection
 {
     private static $instance = null;
@@ -23,6 +28,11 @@ class DatabaseConnection
         $this->pdo = new \PDO($dsn, $user, $pass, $options);
     }
 
+    /**
+     * Obtiene la instancia única de la conexión.
+     *
+     * @return DatabaseConnection
+     */
     public static function getInstance(): DatabaseConnection
     {
         if (self::$instance === null) {
@@ -31,6 +41,11 @@ class DatabaseConnection
         return self::$instance;
     }
 
+    /**
+     * Retorna la conexión PDO.
+     *
+     * @return \PDO
+     */
     public function getConnection(): \PDO
     {
         return $this->pdo;

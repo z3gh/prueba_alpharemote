@@ -2,8 +2,19 @@
 
 namespace App\Config;
 
+
+/**
+ * Class Env
+ *
+ * Carga las variables de entorno desde un archivo .env.
+ */
 class Env
 {
+    /**
+     * Carga las variables de entorno desde el archivo especificado.
+     *
+     * @param string $file Ruta al archivo .env
+     */
     public static function load(string $file): void
     {
         if (file_exists($file)) {
