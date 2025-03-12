@@ -5,18 +5,13 @@ namespace App\Console;
 use App\Repository\ResourceRepository;
 use App\Interface\CommandInterface;
 
-/**
- * Class SearchCommand
- *
- * Comando para buscar recursos (clases y exámenes).
- */
 class SearchCommand implements CommandInterface
 {
     private $repository;
 
-    public function __construct()
+    public function __construct($repository = null)
     {
-        $this->repository = new ResourceRepository();
+        $this->repository = $repository !== null ? $repository : new ResourceRepository();
     }
 
     /**

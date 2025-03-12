@@ -14,6 +14,11 @@ Esta aplicación de consola en PHP permite buscar recursos (clases y exámenes) 
 2. Crea la base de datos ejecutando el archivo `sql/create_tables.sql` en tu servidor MySQL.
 3. Configura las credenciales de la base de datos en `.env`.
 
+## Pruebas Unitarias
+Ejecuta las pruebas unitarias:
+
+php phpunit-9.6.22.phar --bootstrap vendor/autoload.php tests
+
 ## Uso
 
 Ejecuta el comando en consola:
